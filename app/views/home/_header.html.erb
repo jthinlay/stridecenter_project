@@ -1,8 +1,12 @@
-
 <div class="container">
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <%= link_to 'Home', root_path %>
-  <%= link_to 'About Us', home_about_path %>
-</nav>
+ <a class="navbar-bran" href="#">Golden</a>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
+
+<ul class="nav navbar-nav navbar-right">
+  <li><%= link_to 'Home', root_path %></li>
+  <li><%= link_to 'About Us', home_about_path %></li>
+  <li><%= link_to "Login", new_user_session_path %></li>
+  <li><%= link_to "Join", new_user_registration_path %> </li>
+</ul>
+</div>
 </div>

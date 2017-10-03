@@ -9,10 +9,14 @@
 <body>
 <%= render 'home/header' %>
 <div class="container">
+    
+<% flash.each do |name, msg|%>
+    <%= content_tag(:div,msg, class:"alert alert-info") %>
+<% end %>
+
 <div class="jumbotron center">
    <%= yield %>
-   <button type="button" class="btn btn-primary">Login</button>
-   <button type="button" class="btn btn-info">Join </button>
+  
 </div>
  
 </div>
