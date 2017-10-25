@@ -1,6 +1,7 @@
 <%= render  'home/jumbo' unless user_signed_in? %>
 <p id="notice"><%= notice %></p>
 <div id="pins" class="transitions-enabled clearfix">
+ 
   <% @pins.each do |pin| %>
   
     <div class="box">
@@ -8,16 +9,13 @@
         <%= link_to image_tag(pin.image.url(:medium)), pin %><br>
          <div class="panel panel-body">
          <strong> <%= pin.description %></strong><br/>
-         
         </div>
-        
-        
-          <div class="panel panel-footer">
-            <% if pin.user == current_user %>
-                <%= link_to 'Edit', edit_pin_path(pin) %>
-                <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
-            <% end %>
+        <% if user_signed_in? %>
+        <div class="panel panel-footer">
+            <%= link_to 'Edit', edit_pin_path(pin) %>
+            <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
          </div>
+         <% end %>
      </div>
    </div>
     <% end %>
