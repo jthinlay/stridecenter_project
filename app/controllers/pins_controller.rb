@@ -1,12 +1,12 @@
 class PinsController < ApplicationController
-  before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:eidt, :update, :destroy]
 
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /pins/1
@@ -78,4 +78,5 @@ class PinsController < ApplicationController
     def pin_params
       params.require(:pin).permit(:description, :image)
     end
+  
 end
