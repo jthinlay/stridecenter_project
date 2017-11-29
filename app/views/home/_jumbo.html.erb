@@ -1,7 +1,7 @@
 <div class="jumbotron center">
-<h2>JT Stride Center Graduation Project</h2>
-<p>2017 Fundamental Web Developing Technology Coding 99 Class</p>
-
+<h1>JT Stride Center Project</h1>
+<p>2017 Fundamental Web Developing Technology Coding 99 Class</p><br/><br/>
+<%= image_tag("header.jpg", class: "img-responsive") %>
 <% if user_signed_in? %>
   <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'btn btn-primary' %>
   <%= link_to "Edit Profile", edit_user_registration_path, class:'btn btn-default' %>

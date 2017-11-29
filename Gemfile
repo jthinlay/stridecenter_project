@@ -17,6 +17,7 @@ gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'jquery-turbolinks'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+gem 'bxslider-rails', '~> 4.2', '>= 4.2.5.1'
 
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'

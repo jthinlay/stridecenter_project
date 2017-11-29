@@ -16,4 +16,5 @@
 //= require masonry/jquery.masonry
 //= require bootstrap-sprockets
 //= require bootstrap
+//= require bxslider
 //= require_tree .
